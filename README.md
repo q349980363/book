@@ -1,5 +1,5 @@
-# book
-
+# Book
+这是一个小说爬虫应用
 ## Project setup
 ```
 yarn install
