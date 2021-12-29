@@ -5,7 +5,6 @@
       <span>书籍</span>
     </p>
        <div class="book">
-       <div class="book"></div>
        <p>书名</p>
        </div>
   </div>
@@ -27,4 +26,5 @@ export default class Home extends Vue {}
 .inp
   width 80%
   height 30px
+  
 </style>
