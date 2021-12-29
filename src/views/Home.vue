@@ -26,5 +26,8 @@ export default class Home extends Vue {}
 .inp
   width 80%
   height 30px
+
+.book
+  width 50px
   
 </style>
