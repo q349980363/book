@@ -1,25 +1,19 @@
 # Book
 这是一个小说爬虫应用
 
-## Project setup
+## 启动命令
+
+### electron:build 打包二进制文件包
 ```
-yarn install
+vue-cli-service electron:build
 ```
 
-### Compiles and hot-reloads for development
+### electron:serve 启动实时调试服务
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+vue-cli-service electron:serve
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+## 截图
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 首页
+![](./screenshots/Snipaste_2021-12-30_01-25-11.png)
