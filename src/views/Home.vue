@@ -4,9 +4,9 @@
     <p class="book-word">
       <span>书籍</span>
     </p>
-       <div class="book">
-       <p>书名</p>
-       </div>
+    <div class="book">
+    </div>
+    <p>书名</p>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default class Home extends Vue {}
   height 30px
 
 .book
-  width 50px
-  
+  width 100px
+  height 150px
+  border 1px solid #000
 </style>
