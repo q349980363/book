@@ -3,7 +3,7 @@
     <div class="select-title">
       <span class="select-book">选择书籍</span>
       <span>已选择{{ BookLength }}本书籍</span>
-      <span @click="back()">取消</span>
+      <span class="select-cancel" @click="back()">取消</span>
     </div>
     <div class="books">
       <div
@@ -70,6 +70,8 @@ export default class Select extends Vue {
 .select-book
   font-size 18px
   font-weight 600
+.select-cancel
+  cursor pointer
 .book-item
   position relative
   .book-choice

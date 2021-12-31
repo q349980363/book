@@ -2,7 +2,7 @@
   <div class="search">
     <div class="search-box">
       <div class="search-box-left">
-        <i class="bi bi-chevron-left search-button" @click="back()" style="cursor: pointer"></i> 
+        <i class="bi bi-chevron-left search-button" @click="back()"></i> 
       </div>
       <div class="search-box-right">
         <i class="bi bi-search search-ico"></i>
@@ -57,11 +57,13 @@ export default class Search extends Vue {
 .search-button
   display inline-block
   margin-top 5px
+  cursor pointer
 .search-box
   display flex
-  width 100%
   padding 10px 10px
   margin 0 -8px
+  width 100%
+  border-bottom 1px solid #000
 .search-box-right
   flex 1
   position relative
@@ -85,5 +87,6 @@ export default class Search extends Vue {
   font-size 20px
 .search-list-item
   padding 10px 0 10px 25px
+  border-bottom 1px solid #000
 
 </style>

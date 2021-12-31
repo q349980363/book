@@ -11,6 +11,25 @@
     <div class="open-mian">
       {{ GetText() }}
     </div>
+    <div class="open-list">
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+      <div class="open-list-item">第一章</div>
+    </div>
   </div>
 </template>
 
@@ -31,11 +50,13 @@ export default class Open extends Vue {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .open
   display flex
   flex-direction column
   height 100%
+  position relative
+
 .open-head
   display flex
   justify-content space-between
@@ -45,10 +66,23 @@ export default class Open extends Vue {
   border-bottom 1px solid #000
   padding 0 10px
 .open-head-rigth
-    color #dc3545
-    font-size 30px
+  color #dc3545
+  font-size 30px
 
 .open-mian
   flex 1
   overflow-y auto
+
+.open-list
+  position absolute
+  top 50px
+  right 0
+  z-index 1
+  width 200px
+  height 300px
+  background-color #aaa
+  overflow-y auto
+.open-list-item
+  cursor pointer
+  border-bottom 1px solid #000
 </style>
