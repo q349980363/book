@@ -35,7 +35,7 @@ export default class Open extends Vue {
 .open
   display flex
   flex-direction column
-  
+  height 100%
 .open-head
   display flex
   justify-content space-between
@@ -47,4 +47,8 @@ export default class Open extends Vue {
 .open-head-rigth
     color #dc3545
     font-size 30px
+
+.open-mian
+  flex 1
+  overflow-y auto
 </style>

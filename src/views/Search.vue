@@ -11,6 +11,26 @@
     </div>
     <div class="search-list">
      <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
+     <div class="search-list-item">书名</div>
     </div>
   </div>
 </template>
@@ -32,6 +52,7 @@ export default class Search extends Vue {
 .search
   display flex
   flex-direction column
+  height 100%
 
 .search-box
   display flex
@@ -47,8 +68,8 @@ export default class Search extends Vue {
   margin-left 5px
 .search-box-right
   flex 1
-  wwidth 100%
 .search-input
+  width 100%
   height 30px
   border 0
   margin-left 10px
@@ -58,6 +79,7 @@ export default class Search extends Vue {
 
 .search-list
   flex 1
+  overflow-y auto
   font-size 20px
 .search-list-item
   padding 10px 0 10px 25px
