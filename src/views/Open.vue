@@ -8,7 +8,7 @@
       ></i>
       <span class="open-head-rigth"><i class="bi bi-list"></i></span>
     </div>
-    <div>
+    <div class="open-mian">
       {{ GetText() }}
     </div>
   </div>
@@ -32,15 +32,18 @@ export default class Open extends Vue {
 </script>
 
 <style lang="stylus">
-.open-head
+.open
   display flex
   flex-direction column
+  
+.open-head
+  display flex
+  justify-content space-between
   width 100%
   height 50px
   line-height 50px
   border-bottom 1px solid #000
   padding 0 10px
-
 .open-head-rigth
     color #dc3545
     font-size 30px
