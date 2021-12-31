@@ -54,21 +54,22 @@ export default class Search extends Vue {
   flex-direction column
   height 100%
 
+.search-button
+  display inline-block
+  margin-top 5px
 .search-box
   display flex
   width 100%
   padding 10px 10px
- 
-.search-button
-  display inline-block
-  margin-top 5px
+  margin 0 -8px
+.search-box-right
+  flex 1
+  position relative
 .search-ico
   position absolute
   left 40px
   margin-top 5px
-  margin-left 5px
-.search-box-right
-  flex 1
+  margin-left -20px
 .search-input
   width 100%
   height 30px
