@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
+      - run: yarn
       - run: npm run electron:build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
