@@ -26,8 +26,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: yarn
-      - run: npm run electron:build
+      - name: electron:build
+        env:
+            GH_TOKEN: ${{ secrets.github_token }}
+        run: |
+        yarn
+        run: npm run electron:build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:

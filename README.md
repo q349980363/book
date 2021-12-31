@@ -5,12 +5,12 @@
 
 ### electron:build 打包二进制文件包
 ```
-vue-cli-service electron:build
+npm run electron:build
 ```
 
 ### electron:serve 启动实时调试服务
 ```
-vue-cli-service electron:serve
+npm run electron:serve
 ```
 
 ## 截图
