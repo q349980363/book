@@ -58,6 +58,7 @@ export default class Search extends Vue {
   display flex
   width 100%
   padding 10px 10px
+ 
 .search-button
   display inline-block
   margin-top 5px
