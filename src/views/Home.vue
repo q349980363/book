@@ -1,54 +1,82 @@
 <template>
   <div class="home">
-    <h1 class="title">免费小说 Kindle阅读</h1>
-    <input type="text" class="search" />
-    <h3 class="book-list">
-      <span>书架</span>
-      <span class="choice-book" @click="choice"> 选择</span>
-    </h3>
-    <div class="books">
-      <div class="book" :key="i" v-for="i in 10">
-        <div class="book-item">
-          <img src="https://fakeimg.pl/150x200/" alt="" />
+    <div class="home-title">
+      <h1 class="explain">免费小说 Kindle阅读</h1>
+      <router-link to="/search" class="search">
+        <div class="search-item">
+          <i class="bi bi-search home-search"></i>
         </div>
-        <p>书名</p>
-      </div>
+      </router-link>
+      <h3 class="home-title-tool">
+        <span>书架</span>
+        <router-link to="/select">
+          <i class="bi bi-check2-circle"></i>
+          <span class="choice-book">选择</span>
+        </router-link>
+      </h3>
+    </div>
+    <div class="books">
+      <router-link
+        to="/open"
+        class="book"
+        :title="book.name"
+        :key="book.id"
+        v-for="book in books"
+      >
+        <div class="book-item">
+          <img :src="book.imgurl" :alt="book.name" />
+        </div>
+        <div class="book-name">{{ book.name }}</div>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import { GetBook, GetBooks } from "../store/TestData";
 
 @Options({
   components: {},
-  methods:{
-    choice(){
-      this.$router.push('/about')
-    }
-  },
-
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  books = GetBooks();
+}
 </script>
 
-<style lang="stylus">
-
-.title
-  padding 10px 15px
-  color #666
-  font-size 20px
-.search
+<style lang="stylus" scoped>
+.home
+  display flex
+  flex-direction column
+  height 100%
+.home-title
   width 100%
-  height 30px
+  // height 130px
+  font-size 30px
+  background-color #ddd
+  box-shadow: 0 1px 6px rgb(0 0 0 / 35%)
+.explain
+  width 100%
+  text-align center
+  padding 20px 15px
+  color #666
+.search
+  // padding  0 10px
+.search-item
+  // width 100%
+  margin 0 15px
   border 0
-  margin 0
-  padding 0 10px 
+  // margin 0
+  padding-left 10px
   background-color #eee
   border-radius 15px
   font-size 16px
-
-.book-list
+.home-search
+  display inline-block
+  margin-top 5px
+.home-title-tool
+  width 100%
+  // height 50px
   display flex
   justify-content space-between
   padding 10px 15px
@@ -58,28 +86,4 @@ export default class Home extends Vue {}
     font-weight 400
     font-size 16px
     color #444
-
-.books
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-.book
-  // width 100%/5
-  // flex-grow 1
-  // margin auto
-
-  margin-right: auto
-  margin-left: auto
-  .book-item
-    box-shadow: 0 1px 6px rgb(0 0 0 / 35%)
-    width 150px
-    height 200px
-  // border 1px solid #000
-  img
-    width 100%
-    height 100%
-  p
-    margin-top 5px
-    margin-bottom 25px
-
 </style>
