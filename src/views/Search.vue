@@ -60,8 +60,6 @@ export default class Search extends Vue {
   cursor pointer
 .search-box
   display flex
-  padding 10px 10px
-  margin 0 -8px
   width 100%
   border-bottom 1px solid #000
 .search-box-right

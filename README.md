@@ -5,12 +5,12 @@
 
 ### electron:build 打包二进制文件包
 ```
-npm run electron:build
+yarn electron:build
 ```
 
 ### electron:serve 启动实时调试服务
 ```
-npm run electron:serve
+yarn electron:serve
 ```
 
 ## 截图
