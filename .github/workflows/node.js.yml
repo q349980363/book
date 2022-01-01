@@ -20,17 +20,29 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: Cache
+        uses: actions/cache@v2.1.7
+        with:
+          # A list of files, directories, and wildcard patterns to cache and restore
+          path: |
+            **/node_modules
+          key: Node.js ${{ matrix.node-version }}
+ 
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - name: yarn install
+        env:
+            GH_TOKEN: ${{ secrets.github_token }}
+        run: |
+          yarn install
       - name: electron:build
         env:
             GH_TOKEN: ${{ secrets.github_token }}
         run: |
-          yarn
           yarn electron:build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
@@ -39,3 +51,5 @@ jobs:
           path: |
             dist_electron
             !dist_electron/**/*.md
+            
+            
