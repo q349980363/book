@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: yarn
+      - name: yarn install
         env:
             GH_TOKEN: ${{ secrets.github_token }}
         run: |
