@@ -38,7 +38,7 @@ jobs:
         env:
             GH_TOKEN: ${{ secrets.github_token }}
         run: |
-          yarn
+          yarn install
       - name: electron:build
         env:
             GH_TOKEN: ${{ secrets.github_token }}
