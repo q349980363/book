@@ -18,7 +18,9 @@ async function createWindow() {
     height: 800,
     // frame: false, //隐藏标题栏颜色
     webPreferences: {
-      // webSecurity: false,
+      webSecurity: false,
+      // contextIsolation:false,
+      // nodeIntegration:false,
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env

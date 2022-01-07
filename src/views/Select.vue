@@ -27,7 +27,6 @@
         </div>
         <div class="book-name">{{ book.name }}</div>
       </div>
-   
     </div>
   </div>
 </template>
@@ -36,6 +35,8 @@
 import { Options, Vue } from "vue-class-component";
 import { State, Getter, Action, Mutation, namespace } from "vuex-class";
 import { GetBook, GetBooks } from "../store/TestData";
+import { http } from "../store";
+
 @Options({
   components: {},
 })
@@ -54,32 +55,45 @@ export default class Select extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-.select
-  display flex
-  flex-direction column
-  height 100%
-.select-title
-  display flex
-  justify-content space-between
-  width 100%
-  height 50px
-  background-color #ddd
-  text-align center
-  line-height 50px
-  padding 0px 20px
-.select-book
-  font-size 18px
-  font-weight 600
-.select-cancel
-  cursor pointer
-.book-item
-  position relative
-  .book-choice
-    position absolute
-    bottom 8px
-    right 8px
-    font-size 20px
-  .book-choice.active
-    color #36b800
-    font-weight 600
+.select {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.select-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 50px;
+  padding: 0px 20px;
+}
+
+.select-book {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.select-cancel {
+  cursor: pointer;
+}
+
+.book-item {
+  position: relative;
+
+  .book-choice {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 20px;
+  }
+
+  .book-choice.active {
+    color: #36b800;
+    font-weight: 600;
+  }
+}
 </style>
