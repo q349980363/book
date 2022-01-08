@@ -114,6 +114,7 @@ export default class Search extends Vue {
 }
 
 .search-list-item {
+  cursor: pointer;
   padding: 10px 0 10px 25px;
   border-bottom: 1px solid #000;
 }
