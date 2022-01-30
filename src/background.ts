@@ -11,7 +11,7 @@ protocol.registerSchemesAsPrivileged([
 ]);
 
 async function createWindow() {
-  Menu.setApplicationMenu(null);
+  // Menu.setApplicationMenu(null);
   // Create the browser window.
   const win = new BrowserWindow({
     width: 1000,
@@ -64,7 +64,7 @@ app.on("ready", async () => {
     // Install Vue Devtools
     try {
       await installExtension(VUEJS3_DEVTOOLS);
-    } catch (e) {
+    } catch (e: any) {
       console.error("Vue Devtools failed to install:", e.toString());
     }
   }
